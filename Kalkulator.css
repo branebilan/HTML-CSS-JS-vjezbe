@@ -1,0 +1,52 @@
+.js-calculation {
+  font-family: Arial;
+  font-size: 44px;
+  color: white;
+  margin-bottom: 4px;
+  margin-top: 16px;
+}
+
+.siva-zona {
+  background-color: rgb(51, 48, 48);
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border-color: transparent;
+  border-width: 1px;
+  box-shadow: none;
+  border-style: solid;
+  color: white;
+  margin-right: 4px;
+  font-size: 26px;
+  font-family: Arial;
+}
+
+.siva-zona-clear {
+  background-color: rgb(51, 48, 48);
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border-color: transparent;
+  border-width: 1px;
+  box-shadow: none;
+  border-style: solid;
+  color: white;
+  margin-right: 4px;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+.oranje {
+  background-color: rgb(223, 159, 40);
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border-color: transparent;
+  border-width: 1px;
+  box-shadow: none;
+  border-style: solid;
+  color: white;
+  margin-right: 4px;
+  font-size: 26px;
+  font-family: Arial;
+}
