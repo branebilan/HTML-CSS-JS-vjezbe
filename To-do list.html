@@ -9,15 +9,20 @@
 
   <body>
   <div class="todo-flex">
-    <div class="prvi"><input class="dodaj" type="text"></div>
+    <div class="prvi"><input class="dodaj" type="text" maxlength="13" align-text: center;></div>
     <div class="drugi"><input class="datum" type="date"></div>
-    <div class="trechi"><button onclick="addList()" class="dugme"><p style="font-size: 18px; margin-top: 12px;">Add</p></button></div>
+    <div class="cetri"><input class="vrime" type="time"></div>
+    <div class="trechi"><button onclick="addList();" class="dugme"><p style="font-size: 18px; margin-top: 12px;">Add</p></button></div>
+    <div class="trechi"><button onclick="deleteAll();" class="brisanje-dva"><p style="font-size: 20px; margin-top: 12px; text-align: center; margin-bottom: 10px;"></p>Remove all</p></button></div>
   </div>
+  <div class="afterdodatak"></div>
+</div>
+
+<script src="To-do list.js"></script>
+
   </body>
 
 </html>
-
-<script type="text/javascript" src="To-do list.js"></script>
 
 
 <style>
@@ -27,6 +32,13 @@
     display: flex;
     flex-direction: row;
     margin-top: 5px;
+  }
+
+  .fleksovi {
+    width: 810px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
   }
 
   .naziv {
@@ -40,6 +52,7 @@
     font-size: 24px;
     font-family: Segoe UI;
     margin-bottom: 5px;
+    overflow: hidden;
   }
 
   .datum-2 {
@@ -55,17 +68,44 @@
     font-family: Segoe UI;
   }
 
+  .vrime-2 {
+    width: 95px;
+    height: 40px;
+    margin-top: 12px;
+    margin-left: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: aqua;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: Segoe UI;
+    text-align: center;
+  }
+  
+  input[type=checkbox] {
+    width: 33px;
+    height: 33px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: aqua;
+    display: inline;
+    float:left;
+    margin: 10px 10px 3 0;
+    cursor: pointer;
+  }
+
   .dugme-2 {
     height: 52px;
     width: 100px;
-    font-size: 18px;
-    margin-left: 10px;
+    font-size: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
     margin-top: 5px;
   }
 
   .check {
     height: 15px;
-    margin-top: 15px;
+    margin-top: 1px;
     display: inline-block;
   }
 
@@ -76,6 +116,13 @@
 
   .drugi {
     width: 152px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  .cetri {
+    width: 80px;
     height: 50px;
     margin-top: 5px;
     margin-left: 10px;
@@ -99,6 +146,7 @@
   .naziv {
     width: 250px;
     font-size: 24px;
+    margin-left: 10px;
   }
 
   .naziv:hover {
@@ -119,10 +167,22 @@
     margin-bottom: 2px;
     font-size: 20px;
   }
+
+  .vrime {
+    width: 95px;
+    height: 40px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: coral;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: 20px;
+  }
   
   .datum-2 {
     width: 150px;
     font-size: 24px;
+    text-align: center;
   }
 
   .desno {
@@ -131,6 +191,7 @@
 
   .brisanje {
     margin-left: 0px;
+    margin-right: 7px;
     width: 100px;
     height: 51px;
     border-style: solid;
@@ -141,6 +202,24 @@
     border-radius: 5px;
     font-size: 18px;
     margin-top: 5px;
+
+  }
+
+  .brisanje-dva {
+    margin-left: 18px;
+    margin-right: 7px;
+    width: 120px;
+    height: 48px;
+    border-style: solid;
+    border-width: 0.2px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    padding-bottom: 5px;
   }
 
   .brisanje:hover {
@@ -158,13 +237,13 @@
     margin-left: 1.5px;
     margin-top: 3.5px;
     padding-left: 3px;
+    text-align: center;
   }
 
   .dugme {
     background-color: rgb(39, 156, 108);
     border: none;
     color: white;
-    margin-left: 8px;
     height: 52px;
     width: 100px;
     border-radius: 5px;
@@ -172,11 +251,18 @@
     border-style: solid;
     margin-bottom: 2px;
     padding-bottom: 5px;
-    margin-left: 9.5px;
+    margin-left: 27.5px;
+    margin-right: 12px;
   }
 
   .dugme:hover {
     cursor: pointer;
+  }
+
+  .sve {
+    display: flex;
+    width: 115px;
+    height: 55px;
   }
 
 </style>
